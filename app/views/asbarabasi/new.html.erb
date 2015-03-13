@@ -1,0 +1,52 @@
+<p>Find me in app/views/asbarabasis/new.html.erb</p>
+
+<h1>ASBarabasi</h1>
+<%= form_for @asb, url: {action: "create"}, html: {class: "nifty_form"} do |form| %>
+
+    <p>
+        <%= form.label :name, "Name:" %>
+        <%= form.number_field :name %>
+    </p>
+    <% if @asb.errors[:name].any? %>
+        <p class='error-message'>
+        Invalid name <%= @asb.errors[:name].to_sentence %>
+        </p>
+    <% end %>
+    <p>
+        <%= form.label :n, "N:" %>
+        <%= form.number_field :n %>
+    </p>
+    <p>
+        <%= form.label :hs, "HS:" %>
+        <%= form.number_field :hs %>
+    </p>
+    <p>
+        <%= form.label :ls, "LS:" %>
+        <%= form.number_field :ls %>
+    </p>
+    <p>
+        <%= form.label :nodeplacement, "Node Placement:" %>
+        <%= form.number_field :nodeplacement %>
+    </p>
+    <p>
+        <%= form.label :m, "M:" %>
+        <%= form.number_field :m %>
+    </p>
+    <p>
+        <%= form.label :bwdist, "BWDist:" %>
+        <%= form.number_field :bwdist %>
+    </p>
+    <p>
+        <%= form.label :bwmin, "BWMin:" %>
+        <%= form.number_field :bwmin %>
+    </p>
+    <p>
+        <%= form.label :bwmax, "BWMax:" %>
+        <%= form.number_field :bwmax %>
+    </p>
+
+    <p class='buttons'>
+    <%= form.submit "Create" %>
+    </p>
+<% end %>
+

@@ -1,0 +1,88 @@
+<div class="col-md-12">
+	<div class="table-responsive">
+		<table class="table table-bordered table-striped">
+
+		<thead>
+			<th><h3>AS Only</h3></th>
+			<th><h3>Values</h3></th>
+		</thead>
+		<tbody>
+		
+		<tr>
+			<th class="text-nowrap" scope="row">seed</th>
+			<td class="col-md-5"><%= number_field :rocketfuel, :seed, :value => 0, :options => {:min=>1,:max=>3} %></td>
+		</tr>
+		<tr>
+			<th class="text-nowrap" scope="row">cut</th>
+			<td class="col-md-5"><%= number_field :rocketfuel, :cut, :value => -1, :options => {:min=>1,:max=>3} %></td>
+		</tr>
+		
+		<thread>
+			<th><h3>ISP</h3></th>
+			<th></th>
+		</thread>
+		
+		<tr>
+			<th class="text-nowrap" scope="row">AT&T</th>
+			<td class="col-md-5"><%= select :rocketfuel, :ATT, options_for_select([["Enable",1],
+			["Disable",2]]) %></td>
+		</tr>
+		<tr>
+			<th class="text-nowrap" scope="row">Cable&Wireless</th>
+			<td class="col-md-5"><%= select :rocketfuel, :CableWireLess, options_for_select([["Disable",1],
+			["Enable",2]]) %></td>
+		</tr>
+		<tr>
+			<th class="text-nowrap" scope="row">Ebone</th>
+			<td class="col-md-5"><%= select :rocketfuel, :Ebone, options_for_select([["Disable",1],
+			["Enable",2]]) %></td>
+		</tr>
+		<tr>
+			<th class="text-nowrap" scope="row">Exodus</th>
+			<td class="col-md-5"><%= select :rocketfuel, :Exodus, options_for_select([["Disable",1],
+			["Enable",2]]) %></td>
+		</tr>
+		<tr>
+			<th class="text-nowrap" scope="row">Level3</th>
+			<td class="col-md-5"><%= select :rocketfuel, :Level3, options_for_select([["Disable",1],
+			["Enable",2]]) %></td>
+		</tr>
+		<tr>
+			<th class="text-nowrap" scope="row">Sprint</th>
+			<td class="col-md-5"><%= select :rocketfuel, :Sprint, options_for_select([["Disable",1],
+			["Enable",2]]) %></td>
+		</tr>
+		<tr>
+			<th class="text-nowrap" scope="row">TATACOMM</th>
+			<td class="col-md-5"><%= select :rocketfuel, :TATACOMM, options_for_select([["Disable",1],
+			["Enable",2]]) %></td>
+		</tr>
+		<tr>
+			<th class="text-nowrap" scope="row">Telstra</th>
+			<td class="col-md-5"><%= select :rocketfuel, :Telstra, options_for_select([["Disable",1],
+			["Enable",2]]) %></td>
+		</tr>
+		<tr>
+			<th class="text-nowrap" scope="row">Tiscali</th>
+			<td class="col-md-5"><%= select :rocketfuel, :Tiscali, options_for_select([["Disable",1],
+			["Enable",2]]) %></td>
+		</tr>
+		<tr>
+			<th class="text-nowrap" scope="row">UUNET701</th>
+			<td class="col-md-5"><%= select :rocketfuel, :UUNET703, options_for_select([["Disable",1],
+			["Enable",2]]) %></td>
+		</tr>
+		<tr>
+			<th class="text-nowrap" scope="row">Verio</th>
+			<td class="col-md-5"><%= select :rocketfuel, :Verio, options_for_select([["Disable",1],
+			["Enable",2]]) %></td>
+		</tr>
+		<tr>
+			<th class="text-nowrap" scope="row">Abovenet</th>
+			<td class="col-md-5"><%= select :rocketfuel, :Abovenet, options_for_select([["Disable",1],
+			["Enable",2]]) %></td>
+		</tr>
+		</tbody>
+	</table>
+	</div>
+</div>

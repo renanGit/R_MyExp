@@ -1,0 +1,9 @@
+<html>
+	<% if @form_type == 0 %>
+		<div class="page-header"><h1>Rocket Fuel</h1></div>
+		<%= form_tag :action => 'create' do %>
+			<%= render :template => 'rocketfuel/rocketfuel' %>
+			<%= submit_tag "Enter", :name => "rocketfuel", class: "btn btn-primary" %>
+		<% end %>
+	<% end %>	  
+</html>

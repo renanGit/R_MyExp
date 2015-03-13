@@ -1,0 +1,42 @@
+<div class="col-md-12">
+		<div class="table-responsive">
+			<table class="table table-bordered table-striped">
+
+		<thead>
+			<th><h3>Inet</h3></th>
+			<th><h3>Values</h3></th>
+		</thead>
+		<tbody>
+			<tr>
+				<th class="text-nowrap" scope="row">N</th>
+				<td class="col-md-5"><%= number_field :inet, :N, :value => 6000 %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">k</th>
+				<td class="col-md-5"><%= number_field :inet, :k, :value => 0.3 %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">n</th>
+				<td class="col-md-5"><%= number_field :inet, :n, :value => 1000 %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">seed</th>
+				<td class="col-md-5"><%= number_field :inet, :seed, :value => 0 %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">BWDist</th>
+				<td class="col-md-5"><%= select :inet, :BWDist, options_for_select([["Uniform", 1],
+				["Constant", 2],["HeavyTailed",3],["Exponetial",4]]) %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">BWMin</th>
+				<td class="col-md-5"><%= number_field :inet, :BWMin, :value => 10 %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">BWMax</th>
+				<td class="col-md-5"><%= number_field :inet, :BWMax, :value => 1024 %></td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+</div>

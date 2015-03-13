@@ -1,0 +1,15 @@
+<% provide(:title, 'Home') %>
+<% if signed_in? %>
+    <div class="row">
+        <aside class="col-md-12">
+            <section class="user_info">
+                <%= render 'shared/user_info' %>
+            </section>
+            <section class="index">
+                <%= render 'experiments/index' %>
+            </section>
+        </aside>
+    </div>
+<% else %>
+    <%= render 'static_pages/index' %>
+<% end %>

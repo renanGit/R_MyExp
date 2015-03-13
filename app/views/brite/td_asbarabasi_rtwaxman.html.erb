@@ -1,0 +1,149 @@
+<div class="col-md-12">
+	<div class="table-responsive">
+		<table class="table table-bordered table-striped">
+
+			<thead>
+				<th><h3>Top-Down</h3></th>
+				<th><h3>Values</h3></th>
+			</thead>
+			<tbody>
+			<tr>
+				<th class="text-nowrap" scope="row">Name</th>
+				<td class="col-md-5"><%= number_field :tbw_form, :Name, :value => 5, :options => {:min=>1,:max=>3} %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">edge connect</th>
+				<td class="col-md-5"><%= select :tbw_form, :edgeConn, options_for_select([["Random", 1],
+				["Smallest Nonleaf", 2],["Smallest Deg",3],["k-Degree", 4]]) %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">k</th>
+				<td class="col-md-5"><%= number_field :tbw_form, :k, :value => -1, :options => {:min=>1,:max=>3} %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">BWInter</th>
+				<td class="col-md-5"><%= select :tbw_form, :BWInter, options_for_select([["Constant", 1], 
+				["Uniform", 2],["HeavyTailed",3],["Exponetial",4]]) %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">BWInterMin</th>
+				<td class="col-md-5"><%= number_field :tbw_form, :BWInterMin, :value => 10.0 %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">BWInterMax</th>
+				<td class="col-md-5"><%= number_field :tbw_form, :BWInterMax, :value => 1024.0 %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">BWIntra</th>
+				<td class="col-md-5"><%= select :tbw_form, :BWIntra, options_for_select([["Constant", 1], 
+				["Uniform", 2],["HeavyTailed",3],["Exponetial",4]]) %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">BWIntraMin</th>
+				<td class="col-md-5"><%= number_field :tbw_form, :BWIntraMin, :value => 10.0 %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">BWIntraMax</th>
+				<td class="col-md-5"><%= number_field :tbw_form, :BWIntraMax, :value => 1024.0 %></td>
+			</tr>
+	
+			<thead>
+				<th><h3>Router</h3></th>
+				<th></th>
+			</thead>
+			
+			<tr>
+				<th class="text-nowrap" scope="row">Name</th>
+				<td class="col-md-5"><%= number_field :tbw_form, :__Name, :value => 4, :options => {:min=>1,:max=>3} %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">N</th>
+				<td class="col-md-5"><%= number_field :tbw_form, :N, :value => 100, :options => {:min=>1,:max=>3} %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">HS</th>
+				<td class="col-md-5"><%= number_field :tbw_form, :HS, :value => 1000, :options => {:min=>1,:max=>3} %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">LS</th>
+				<td class="col-md-5"><%= number_field :tbw_form, :LS, :value => 1000, :options => {:min=>1,:max=>3} %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">NodePlacement</th>
+				<td class="col-md-5"><%= select :tbw_form, :NodePlacement, options_for_select([["Random",1],["HeavyTailed",2]]) %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">m</th>
+				<td class="col-md-5"><%= number_field :tbw_form, :m, :value => 2, :options => {:min=>1,:max=>3} %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">BWDist</th>
+				<td class="col-md-5"><%= number_field :tbw_form, :BWDist, :value => 1 %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">BWMin</th>
+				<td class="col-md-5"><%= number_field :tbw_form, :BWMin, :value => -1.0 %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">BWMax</th>
+				<td class="col-md-5"><%= number_field :tbw_form, :BWMax, :value => -1.0 %></td>
+			</tr>
+
+			<thead>
+				<th><h3>Router Level: Waxman</h3></th>
+				<th></th>
+			</thead>
+			
+			<tr>
+				<th class="text-nowrap" scope="row">Name</th>
+				<td class="col-md-5"><%= number_field :tbw_form, :__Name_, :value => 1, :options => {:min=>1,:max=>3} %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">N</th>
+				<td class="col-md-5"><%= number_field :tbw_form, :N_, :value => 100, :options => {:min=>1,:max=>3} %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">HS</th>
+				<td class="col-md-5"><%= number_field :tbw_form, :HS_, :value => 1000, :options => {:min=>1,:max=>3} %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">LS</th>
+				<td class="col-md-5"><%= number_field :tbw_form, :LS_, :value => 100, :options => {:min=>1,:max=>3} %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">NodePlacement</th>
+				<td class="col-md-5"><%= select :tbw_form, :NodePlacement_, options_for_select([["Random",1],["HeavyTailed",2]]) %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">GrowthType</th>
+				<td class="col-md-5"><%= select :tbw_form, :GrowthType_, options_for_select([["Incremental",1],["All",2]]) %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">m</th>
+				<td class="col-md-5"><%= number_field :tbw_form, :m_, :value => 2, :options => {:min=>1,:max=>3} %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">alpha</th>
+				<td class="col-md-5"><%= number_field :tbw_form, :alpha_, :value => 0.15 %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">beta</th>
+				<td class="col-md-5"><%= number_field :tbw_form, :beta_, :value => 0.2 %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">BWDist</th>
+				<td class="col-md-5"><%= number_field :tbw_form, :BWDist_, :value => 1 %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">BWMin</th>
+				<td class="col-md-5"><%= number_field :tbw_form, :BWMin_, :value => -1.0 %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">BWMax</th>
+				<td class="col-md-5"><%= number_field :tbw_form, :BWMax_, :value => -1.0 %></td>
+			</tr>
+
+			</tbody>
+		</table>
+	</div>
+</div>

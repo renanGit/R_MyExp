@@ -1,0 +1,33 @@
+<html>
+	<% if @form_type == 0 %>
+		<div class="page-header"><h1>Brite: Top AS Waxman Router Waxman</h1></div>
+		<%= form_tag :action => 'create' do %>
+			<%= render :template => 'brite/td_aswaxman_rtwaxman' %>
+			<%= submit_tag "Enter", :name => "tww_button", class: "btn btn-primary" %>
+		<% end %>
+	<% elsif @form_type == 1 %>
+		<div class="page-header"><h1>Brite: Top AS Barabasi Router Waxman</h1></div>
+		<%= form_tag :action => 'create' do %>
+			<%= render :template => 'brite/td_asbarabasi_rtwaxman' %>
+			<%= submit_tag "Enter", :name => "tbw_button", class: "btn btn-primary" %>
+		<% end %>
+	<% elsif @form_type == 2 %>
+		<div class="page-header"><h1>Brite: AS Waxman</h1></div>
+		<%= form_tag :action => 'create' do %>
+			<%= render :template => 'brite/aswaxman' %>
+			<%= submit_tag "Enter", :name => "asw_button", class: "btn btn-primary" %>
+		<% end %>
+	<% elsif @form_type == 3 %>
+		<div class="page-header"><h1>Brite: Router Barabasi</h1></div>
+		<%= form_tag :action => 'create' do %>
+			<%= render :template => 'brite/rtbarabasi' %>
+			<%= submit_tag "Enter", :name => "rtb_button", class: "btn btn-primary" %>
+		<% end %>
+	<% elsif @form_type == 4 %>
+		<div class="page-header"><h1>Brite: Router Waxman</h1></div>
+		<%= form_tag :action => 'create' do %>
+			<%= render :template => 'brite/rtwaxman' %>
+			<%= submit_tag "Enter", :name => "rtw_button", class: "btn btn-primary" %>
+		<% end %>
+	<% end %>
+</html>

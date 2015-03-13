@@ -1,0 +1,35 @@
+<div class="page-header"><h1>My Experiments</h1></div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">Experiments</div>
+	
+	<% if @count == 0 %>
+		<div class="panel-body">
+			No experiments created yet.
+		</div>
+	<% else %>
+		<table class="table">
+			<tr>
+				<th>#</th>
+				<th>Experiment</th>
+				<th>Created On</th>
+				<th></th>
+				<th></th>
+				<th></th>
+			</tr>
+		
+			<% @experiment.each.with_index do |element, index| %>
+				<tr>
+					<td><%= index+1 %></td>
+					<td>Brite Experiment</td>
+					<td><%= element.created_at %></td>
+					<td><%= link_to "View Model", {controller: 'experiments', action: 'show', :id=> element.id},  {class: "label label-success"} %></td>
+					<td><%= link_to "Delete", experiment_path(:id=>element.id), method: :delete,  class: "label label-danger" %></td>
+				</tr>
+			<% end %>
+		</table>
+		<%= will_paginate @experiment %>
+	<% end %>
+</div>
+
+

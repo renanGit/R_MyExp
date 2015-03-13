@@ -1,0 +1,2 @@
+module BriteHelper
+end

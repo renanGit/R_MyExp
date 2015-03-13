@@ -1,0 +1,52 @@
+<div class="col-md-12">
+	<div class="table-responsive">
+		<table class="table table-bordered table-striped">
+
+			<thead>
+				<th><h3>Router Only</h3></th>
+				<th><h3>Values</h3></th>
+			</thead>
+			<tbody>
+			
+			<tr>
+				<th class="text-nowrap" scope="row">Name</th>
+				<td class="col-md-5"><%= number_field :rtbarabasi_form, :Name, :value => 2, :options => {:min=>1,:max=>3} %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">N</th>
+				<td class="col-md-5"><%= number_field :rtbarabasi_form, :N, :value => 100, :options => {:min=>1,:max=>3} %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">HS</th>
+				<td class="col-md-5"><%= number_field :rtbarabasi_form, :HS, :value => 1000, :options => {:min=>1,:max=>3} %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">LS</th>
+				<td class="col-md-5"><%= number_field :rtbarabasi_form, :LS, :value => 100, :options => {:min=>1,:max=>3} %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">NodePlacement</th>
+				<td class="col-md-5"><%= select :rtbarabasi_form, :NodePlacement, options_for_select([["Random",1],
+				["HeavyTailed",2]]) %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">m</th>
+				<td class="col-md-5"><%= number_field :rtbarabasi_form, :m, :value => 2, :options => {:min=>1,:max=>3} %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">BWDist</th>
+				<td class="col-md-5"><%= select :rtbarabasi_form, :BWDist, options_for_select([["Constant", 1], 
+				["Uniform", 2],["HeavyTailed",3],["Exponetial",4]]) %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">BWMin</th>
+				<td class="col-md-5"><%= number_field :rtbarabasi_form, :BWMin, :value => 10.0 %></td>
+			</tr>
+			<tr>
+				<th class="text-nowrap" scope="row">BWMax</th>
+				<td class="col-md-5"><%= number_field :rtbarabasi_form, :BWMax, :value => 1024.0 %></td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+</div>
